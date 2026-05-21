@@ -1,0 +1,291 @@
+body{
+    margin: 0;
+    padding-top: 140px;
+    font-family: 'Segoe UI', 'Twemoji Country Flags', sans-serif;
+    overflow-x: hidden;
+}
+img, button, a{
+    -webkit-user-drag: none;
+}
+@font-face {
+  font-family: 'Twemoji Country Flags';
+  unicode-range: U+1F1E6-1F1FF, U+1F3F4, U+E0062-E0063, U+E0065, U+E0067, U+E006C, U+E006E, U+E0073-E0074, U+E0077, U+E007F;
+  src: url('https://cdn.jsdelivr.net/npm/country-flag-emoji-polyfill@0.1/dist/TwemojiCountryFlags.woff2') format('woff2');
+}
+/* Stile standard per PC (Schermi grandi) */
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display:grid;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0px 5px;
+    background-color: #f0f0f0;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+}
+.languageSection{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-column: 4;
+    gap: 10px;
+}
+.language {
+    font-family: 'Twemoji Country Flags', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+    font-size: 42px;
+    line-height: 1;
+    background: transparent;
+    border: 0px solid transparent;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+}
+.language:hover{
+    transform: scale(1.2);
+}
+/* #currentLang {
+    border-bottom: 2px solid gray;
+    font-size: 54px;
+    } */
+.logo{
+    height: 50px;
+    width: 50px;
+    grid-column: 1;
+    grid-row: 1;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: ease-in-out 0.1s;
+    margin: 10px;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logoIMG{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 7px;
+}
+.categorySection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    grid-column: 2 /span 2;
+    grid-row: 1;
+}
+.category{
+    font-size: 18px;
+    font-weight:bold;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+    border-bottom: 5px solid transparent;
+}
+.category:hover{
+    border-bottom: 5px solid white;
+    transform: scale(1.1);
+}
+.main{
+    /* display: grid;
+    justify-content: center;
+    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* grid-template-columns: 30% 30% 30%; */
+    /* grid-template-rows: auto auto;
+    align-items: center;
+    place-content: center; */
+}
+.selfie{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 100%;
+    /* grid-column: 2;
+    grid-row: 1; */
+    margin: 0px auto;
+    transition: ease-in-out 0.1s;
+}
+.selfie:hover{
+    transform: scale(1.2);
+}
+.selfieIMG{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 95%;
+}
+body{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    background-color: #e0e0e0;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto;
+}
+
+summary{
+    width: 50%;
+    margin: 0 auto;
+}
+summary:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    text-align: justify;
+}
+li{
+    margin-bottom: 10px;
+    border-top: 2px dashed darkgray;
+    padding-top: 10px;
+}
+.destinazioni{
+    grid-column: 2;
+    grid-row: 2;
+}
+.footer{
+    display:grid;
+    justify-content:space-between;
+    align-items:center;
+    background-color: #f0f0f0;
+    grid-template-columns:  30% 30% 30%;
+    grid-template-rows: auto;
+}
+.socialsSection{
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    gap: 10px;
+}
+.socialIMG{
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 5px;
+    color-interpolation-filters: monochrome;
+    filter: grayscale(100%);
+    transition: ease-in-out 0.1s, filter 0.3s ease;
+}
+.socialIMG:hover{
+    transform: scale(1.5);
+    filter: grayscale(0%);
+}
+/* .map-container #IT{
+    fill: rgb(163, 211, 163);
+    } */
+    .map-container #NL, #DE, #FR, #CH, #IE, #IT{
+        fill: rgb(235, 235, 235); 
+    }
+    .map-container svg{
+        fill: rgb(195, 195, 195);
+        transform: scale(0.7)
+    }
+    
+    #IT:hover, #NL:hover, #DE:hover, #FR:hover, #IE:hover, #CH:hover{
+        fill: white;
+    }
+    
+    .map-container{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: lightblue;
+    height: 500px;
+    width: 80%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+@media (max-width: 768px) {
+    body {
+        position: relative;
+        inset: auto;
+        padding-top: 160px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+    }
+    
+    .category {
+        font-size: 11px;
+    }
+    
+    .categorySection {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+        padding: 5px 0px;
+    }
+    
+    .languageSection {
+        grid-column: 2;
+    }
+
+    svg{
+        height: 100%;
+    }
+    
+    .footer {
+        grid-template-columns: auto auto;
+    }
+    
+    .box {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        z-index: 1;
+    }
+
+    .destinazioni {
+        width: 100%;
+        height: 100%;
+    }
+
+    .map-container {
+        height: 350px;
+        width: 90%;
+        margin-top: 20px;
+    }
+    
+    .map-container svg {
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="Assets/logo.png" alt="logo" class="logoIMG"></div>
+        <div class="languageSection">
+             <button class="language" id="en-btn">🇬🇧</button>
+            <button class="language" id="it-btn">🇮🇹</button>
+            <button class="language" id="nl-btn">🇳🇱</button>
+        </div>
+        <div class="categorySection">
+            <button class="category" id="home-btn">Home</button>
+            <button class="category" id="about-btn">About Me</button>
+            <button class="category" id="projects-btn">Projects</button>
+            <a href="journey.html"><button class="category" id="journeys-btn">My Journeys</button></a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="selfie"><img src="Assets/fotoLuca.png" alt="Me in Venice (sept. 2025)" class="selfieIMG"></div>
+        <div class="box" style="grid-template-columns: auto;">
+            <details>
+                <summary id="who-am-i">Who am I?</summary>
+                <h1>I am Luca Pezzera.</h1>
+                <ul>
+                    <li id="birthday"><strong>Birthday:</strong> November 22nd, 2010</li>
+                    <li id="birthplace"><strong>Birthplace:</strong> Bergamo, Italy</li>
+                    <li id="education"><strong>Education:</strong> High-school, IT, Istituto Politecnico di Grumello D.M. (BG) [2024 - ongoing]</li>
+                    <li id="nationality"><strong>Nationality:</strong> Italian, Dutch</li>
+                    <li id="languages"><strong>Languages I speak:</strong> Italian, English</li>
+                </ul>
+            </details>
+        </div>
+    </div>
+    <div class="footer">
+        <p style="font-style: italic; grid-column: 1; grid-row: 1;" id="copyright">© 2026 Luca Pezzera. All rights reserved.</p>
+        <div class="socialsSection">
+            <a href="https://www.discord.com/users/1215351744549224463" target="_blank"><img src="Assets/discord.png" alt="Discord" class="socialIMG"></a>
+            <a href="https://www.facebook.com/profile.php?id=61574686895271&locale=it_IT" target="_blank" alt="Facebook"><img src="Assets/facebook.png" alt="Facebook" class="socialIMG"></a>
+        </div>
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>
