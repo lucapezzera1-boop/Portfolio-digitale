@@ -3,6 +3,8 @@ English.style.textDecoration = "underline";
 const Italian = document.getElementById("it-btn");
 const Dutch = document.getElementById("nl-btn");
 
+const Title = document.getElementById("title");
+
 const home = document.getElementById("home-btn");
 const about = document.getElementById("about-btn");
 const projects = document.getElementById("projects-btn");
@@ -25,16 +27,24 @@ const PaesiBassi = document.getElementById("holland");
 const Irlanda = document.getElementById("ireland");
 const Francia = document.getElementById("france");
 
+const mapItaly = document.getElementById("IT");
+const mapGermany = document.getElementById("DE");
+const mapSwitzerland = document.getElementById("CH");
+const mapNetherlands = document.getElementById("NL");
+const mapIreland = document.getElementById("IE");
+const mapFrance = document.getElementById("FR");
+
 addEventListener("click" , (e) => {
     if(e.target === English){
         English.style.textDecoration = "underline";
         Italian.style.textDecoration = "none";
         Dutch.style.textDecoration = "none";
+        Title.innerHTML="My Online Portfolio";
         home.innerHTML = "Home";
         about.innerHTML = "About Me";
         projects.innerHTML = "Projects";
         journeys.innerHTML = "My Journeys";
-
+        
         CitiesVisited.innerHTML = "Cities visited";
         MyJournyes.innerHTML = "My Journeys";
         
@@ -43,7 +53,7 @@ addEventListener("click" , (e) => {
         Switzerland.innerHTML = "Switzerland. Last visited: 2025";
         Netherlands.innerHTML = "Netherlands. Last visited: 2025";
         Ireland.innerHTML = "Ireland. Last visited: 2025";
-        France.innerHTML = "France. Last visited: 2016";
+        France.innerHTML = "France. Last visited: 2017";
         
         Italia.innerHTML = " 🇮🇹 Italy ";
         Germania.innerHTML = " 🇩🇪 Germany";
@@ -61,6 +71,7 @@ addEventListener("click" , (e) => {
         about.innerHTML = "About Me";
         projects.innerHTML = "Progetti";
         journeys.innerHTML = "I Miei Viaggi";
+        Title.innerHTML="Il Mio Portfolio Online";
         
         CitiesVisited.innerHTML = "Cittá visitate";
         MyJournyes.innerHTML = "I Miei Viaggi";
@@ -70,7 +81,7 @@ addEventListener("click" , (e) => {
         Switzerland.innerHTML = "Svizzera. Ultima visita: 2025";
         Netherlands.innerHTML = "Paesi bassi. Ultima visita: 2025";
         Ireland.innerHTML = "Irlanda. Ultima visita: 2025";
-        France.innerHTML = "Francia. Ultima visita: 2016";
+        France.innerHTML = "Francia. Ultima visita: 2017";
         
         Italia.innerHTML = " 🇮🇹 Italia ";
         Germania.innerHTML = " 🇩🇪 Germania";
@@ -88,6 +99,7 @@ addEventListener("click" , (e) => {
         about.innerHTML = "About Me";
         projects.innerHTML = "Projecten";
         journeys.innerHTML = "Mijn Reizen";
+        Title.innerHTML="Mijn online portfolio";
         
         CitiesVisited.innerHTML = "Steden bezocht";
         MyJournyes.innerHTML = "Mijn Reizen";
@@ -97,7 +109,7 @@ addEventListener("click" , (e) => {
         Switzerland.innerHTML = "Zwitserland. Laatste bezoek: 2025";
         Netherlands.innerHTML = "Nederland. Laatste bezoek: 2025";
         Ireland.innerHTML = "Ierland. Laatste bezoek: 2025";
-        France.innerHTML = "Frankrijk. Laatste bezoek: 2016";
+        France.innerHTML = "Frankrijk. Laatste bezoek: 2017";
         
         Italia.innerHTML = " 🇮🇹 Italië ";
         Germania.innerHTML = " 🇩🇪 Duitsland";
@@ -109,3 +121,17 @@ addEventListener("click" , (e) => {
         copyright.textContent = "© 2026 Luca Pezzera. Alle rechten voorbehouden.";
     }
 })
+function lightUpCountry(targetMapPath) {
+    const activeGlows = document.querySelectorAll('.glow');
+    activeGlows.forEach(path => path.classList.remove('glow'));
+    if (targetMapPath) {
+        targetMapPath.classList.add('glow');
+    }
+}
+
+Italia.addEventListener("click", () => lightUpCountry(mapItaly));
+Germania.addEventListener("click", () => lightUpCountry(mapGermany));
+Svizzera.addEventListener("click", () => lightUpCountry(mapSwitzerland));
+PaesiBassi.addEventListener("click", () => lightUpCountry(mapNetherlands));
+Irlanda.addEventListener("click", () => lightUpCountry(mapIreland));
+Francia.addEventListener("click", () => lightUpCountry(mapFrance));

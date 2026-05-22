@@ -3,12 +3,15 @@ English.style.textDecoration = "underline";
 const Italian = document.getElementById("it-btn");
 const Dutch = document.getElementById("nl-btn");
 
+const Title = document.getElementById("title");
+
 const home = document.getElementById("home-btn");
 const about = document.getElementById("about-btn");
 const projects = document.getElementById("projects-btn");
 const journeys = document.getElementById("journeys-btn");
 
 const whoAmI = document.getElementById("who-am-i");
+const ImLuca = document.getElementById("ImLuca");
 const birthday = document.getElementById("birthday");
 const birthplace = document.getElementById("birthplace");
 const education = document.getElementById("education");
@@ -22,6 +25,8 @@ addEventListener("click" , (e) => {
         Italian.style.textDecoration = "none";
         Dutch.style.textDecoration = "none";
         whoAmI.textContent = "Who am I?";
+        ImLuca.textContent = "I am Luca Pezzera.";
+        Title.innerHTML="My Online Portfolio";
         home.innerHTML = "Home";
         about.innerHTML = "About Me";
         projects.innerHTML = "Projects";
@@ -40,6 +45,8 @@ addEventListener("click" , (e) => {
         home.innerHTML = "Home";
         about.innerHTML = "About Me";
         projects.innerHTML = "Progetti";
+        ImLuca.textContent = "Sono Luca Pezzera.";
+        Title.innerHTML="Il Mio Portfolio Online";
         journeys.innerHTML = "I Miei Viaggi";
         birthday.innerHTML = "<strong>Compleanno:</strong> 22 Novembre 2010";
         birthplace.innerHTML = "<strong>Luogo di nascita:</strong> Bergamo, Italia";
@@ -55,6 +62,9 @@ addEventListener("click" , (e) => {
         about.innerHTML = "About Me";
         projects.innerHTML = "Projecten";
         journeys.innerHTML = "Mijn Reizen";
+        Title.innerHTML="Mijn online portfolio";
+        ImLuca.textContent = "Ik ben Luca Pezzera.";
+        
         whoAmI.textContent = "Wie ben ik?";
         birthday.innerHTML = "<strong>Verjaardag:</strong> 22 November 2010";
         birthplace.innerHTML = "<strong>Geboorteplaats:</strong> Bergamo, Italië";

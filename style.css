@@ -146,9 +146,32 @@ body{
     grid-template-rows: auto auto;
 }
 
-summary{
-    width: 50%;
+summary {
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+summary::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  margin-right: 12px;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::before {
+  transform: rotate(45deg);
+}
+
+details[open] summary::after {
+  transform: rotate(45deg);
 }
 summary:hover{
     cursor: pointer;
@@ -211,6 +234,11 @@ li{
     
     #IT:hover, #NL:hover, #DE:hover, #FR:hover, #IE:hover, #CH:hover{
         fill: white;
+    }
+    /* The glow class that JavaScript will add/remove */
+    .glow {
+        fill: lightgreen !important;
+        transition: all 0.5s ease;
     }
     
     .map-container{
