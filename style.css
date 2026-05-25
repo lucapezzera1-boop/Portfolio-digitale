@@ -66,6 +66,16 @@ img, button, a{
     grid-column: 4;
     gap: 10px;
 }
+.audioplayer{
+    grid-column: 1;
+    grid-row: 1;
+    width: 50%;
+    font-size: 32px;
+    border: 0px solid transparent;
+    background-color: transparent;
+    margin-left: 75px;
+    transition: ease-in-out 0.1s;
+}
 .language {
     font-family: 'Twemoji Country Flags', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
     font-size: 42px;
@@ -76,7 +86,7 @@ img, button, a{
     transition: ease-in-out 0.1s;
     color: var(--text-color);
 }
-.language:hover{
+.language:hover, .audioplayer:hover{
     transform: scale(1.2);
 }
 /* #currentLang {

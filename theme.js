@@ -1,4 +1,6 @@
 const themeToggleBtn = document.getElementById('theme-toggle');
+const musicBtn = document.getElementById('bg-music');
+const musicTrack = document.getElementById('music-track');
 
 const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 document.documentElement.setAttribute('data-theme', savedTheme);
@@ -17,4 +19,14 @@ themeToggleBtn.addEventListener('click', () => {
     
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+});
+musicBtn.addEventListener("click", () => {
+    if (musicTrack.paused) {
+        musicTrack.volume = 0.5;
+        musicTrack.play();
+        musicBtn.innerHTML = "🔊";
+    } else {
+        musicTrack.pause();
+        musicBtn.innerHTML = "🔇";
+    }
 });
