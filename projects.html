@@ -23,33 +23,36 @@
         </div>
         <div class="categorySection">
             <a href="index.html"><button class="category" id="home-btn">Home</button></a>
-            <button class="category" id="about-btn">About Me</button>
+            <a href="about.html"><button class="category" id="about-btn">About Me</button></a>
             <a href="projects.html"><button class="category" id="projects-btn">Projects</button></a>
             <a href="journey.html"><button class="category" id="journeys-btn">My Journeys</button></a>
         </div>
     </div>
 <div class="main">
+    <h1 style="text-align: center;" id="MyProjects">My Projects!</h1>
     <div class="deck-container">
         <button class="arrow-btn" id="prev-btn">◀</button>
 
         <div class="deck">
             
             <div class="project-card active">
-                <a href="Snake/index.html" target = "_blank">
+                <div class="card-info">
                     <img class="card-banner" src="Assets/Snake.png" alt="Snake Game">
-                    <div class="card-info">
-                        <div class="snake" id="snek">This is a snake-like game!</div>
-                    </div>
-                </a>
+                    <div class="snake" id="snek">This is a snake-like game!</div>
+                    <a href="Snake/index.html" target = "_blank">
+                        <button class="btn-project" id="btn-project">Try it now!</button>
+                    </a>
+                </div>
             </div>
-
+            
             <div class="project-card">
-                <a href="https://lucapezzera1-boop.github.io/DOCKER-TEST/index.html" target="_blank">
-                    <img class="card-banner" src="https://github.com/lucapezzera1-boop/DOCKER-TEST/blob/main/Assets/immagine-preview.jpg?raw=true" alt="Docker Test">
-                    <div class="card-info">
-                        <div class="snake" id="website">This is my original website!</div>
+                <img class="card-banner" src="https://github.com/lucapezzera1-boop/DOCKER-TEST/blob/main/Assets/immagine-preview.jpg?raw=true" alt="Docker Test">
+                <div class="card-info">
+                    <div class="snake" id="website">This is my original website!</div>
+                    <a href="https://lucapezzera1-boop.github.io/DOCKER-TEST/index.html" target="_blank">
+                        <button class="btn-project" id="btn-project">Try it now!</button>
+                    </a>
                     </div>
-                </a>
             </div>
 
         </div>

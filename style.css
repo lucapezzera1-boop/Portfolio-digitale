@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #ffffff;
+    --bg-color: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --text-color: #000000;
     --header-footer-bg: #f0f0f0;
     --box-bg: #e0e0e0;
@@ -9,7 +9,7 @@
 }
 
 [data-theme="dark"] {
-    --bg-color: #121212;
+    --bg-color: linear-gradient(135deg, #001020 10%, #102050 100%);
     --text-color: #e0e0e0;
     --header-footer-bg: #1e1e1e;
     --box-bg: #2d2d2d;
@@ -20,10 +20,10 @@
 
 body{
     margin: 0;
-    padding-top: 140px;
+    padding-top: 70px;
     font-family: 'Segoe UI', 'Twemoji Country Flags', sans-serif;
     overflow-x: hidden;
-    background-color: var(--bg-color);
+    background: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -42,6 +42,8 @@ img, button, a{
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background: var(--bg-color);
+    margin-top: 2px;
 }
 .header{
     position: fixed;
@@ -132,6 +134,8 @@ img, button, a{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    background: var(--bg-color);
+    padding: 50px;
     /* grid-template-columns: 30% 30% 30%; */
     /* grid-template-rows: auto auto;
     align-items: center;
@@ -161,24 +165,27 @@ body{
     inset: 0;
     display: flex;
     flex-direction: column;
+    background: var(--bg-color);
 }
 .box{
     background-color: #e0e0e0;
     border: 2px solid black;
     border-radius: 20px;
     padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 90px;
     margin-inline: 30px;
     text-align: center;
     display: grid;
+    min-width: 50%;
+    max-width: 80%;
     grid-template-columns: 80% 20%;
     grid-template-rows: auto auto;
+    margin: auto;
+    margin-top: 20px;
 }
 
 summary {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -218,6 +225,29 @@ li{
     grid-column: 2;
     grid-row: 2;
 }
+.maintitle {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 48px;
+    align-self: center;
+    margin: 20px 0px;
+    padding: 10px 30px;
+    animation: inclinazionamento 3s ease-in-out infinite;
+    transform-origin: center; 
+}
+/* inclinazionamento é una fusione delle parole "Inlinazione" e "Movimento". Peró mi fa morire. d'altronde é un incubo da scrivere correttamente al primo tentativo. lol*/
+@keyframes inclinazionamento {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
 .footer{
     display:grid;
     justify-content:space-between;
@@ -225,6 +255,7 @@ li{
     background-color: #f0f0f0;
     grid-template-columns:  30% 30% 30%;
     grid-template-rows: auto;
+    padding: 0px 20px;
 }
 .socialsSection{
     grid-column: 3;
@@ -361,11 +392,26 @@ li{
 
 .arrow-btn:hover {
     background-color: var(--text-color);
-    color: var(--bg-color);
+    color: var(--header-footer-bg);
 }
 
 .arrow-btn:active {
     transform: scale(0.9);
+}
+
+.btn-project{
+    border-radius: 100px;
+    width: 100%;
+    font-size: 18px;
+    background-color: var(--bg-color);
+    padding: 5px;
+    margin: 10px 0px;
+    transition: ease-in-out 0.1s;
+}
+.btn-project:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+    background-color: var(--map-bg);
 }
 
 @keyframes apparizioneCarta {
@@ -426,7 +472,7 @@ li{
     .map-container {
         margin-top: 20px;
         padding: 10px;
-        width: 95%;
+        width: 90%;
     }
     
     .map-container svg {
