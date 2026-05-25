@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Scopri di piú su di me!">
+    <meta property="og:title" content="Portfolio digitale di Luca P.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/lucapezzera1-boop/Portfolio-digitale/refs/heads/main/Assets/Immagine-preview.png">
+    <title id="title">My Online Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="Assets/logo.png" alt="logo" class="logoIMG"></div>
+        <button class="audioplayer" id="bg-music">
+            <audio id="music-track" src="Assets/music.mp3" loop></audio>🔇
+        </button>
+        <div class="languageSection">
+            <button class="language" id="en-btn">🇬🇧</button>
+            <button class="language" id="it-btn">🇮🇹</button>
+            <button class="language" id="nl-btn">🇳🇱</button>
+            <button id="theme-toggle" style="background: transparent; border: none; font-size: 24px; cursor: pointer;">🌙</button>
+        </div>
+        <div class="categorySection">
+            <button class="category" id="home-btn">Home</button>
+            <a href="about.html"><button class="category" id="about-btn">About Me</button></a>
+            <a href="projects.html"><button class="category" id="projects-btn">Projects</button></a>
+            <a href="journey.html"><button class="category" id="journeys-btn">My Journeys</button></a>
+        </div>
+    </div>
+    <div class="main">
+        <h1 style="color: var(--text-color)" id="intro">I am Luca Pezzera. I live in Bergamo, Italy. I am 15 years old, and I currently study at Istituto Politecnico IT highschool. I love <span id="passion-text" style="font-weight: bold; color: #0076ff;">coding.</span></h1>
+        <div class="box" style="padding: 0px; padding: 10px; grid-template-rows: auto auto auto; grid-template-columns: auto auto;">
+            <h2 style="margin: 0px;">The videogames that I like</h2>
+            <ol style="grid-column: 1; text-align: justify;">
+                <li><img src="Assets/GameCovers/SSBM.png" alt="CopertinaSSBM" id="game-cover"><strong>Super Smash Bros. Melee</strong> Nintendo GameCube, 2001</li>
+                <li><img src="Assets/GameCovers/pikmin1.png" alt="CopertinaPikmin" id="game-cover"><strong>Pikmin 1</strong> Nintendo GameCube, 2001</li>
+                <li><img src="Assets/GameCovers/pikmin2.png" alt="CopertinaPikmin2" id="game-cover"><strong>Pikmin 2</strong> Nintendo GameCube, 2004</li>
+                <li><img src="Assets/GameCovers/Mario64.png" alt="CopertinaMario64" id="game-cover"><strong>Super Mario 64</strong> Nintendo 64 , 1996</li>
+                <li><img src="Assets/GameCovers/Minecraft.png" alt="CopertinaMC" id="game-cover"><strong>Minecraft</strong> PCs, 2009</li>
+                <li><img src="Assets/GameCovers/Hoi4.png" alt="CopertinaSSBM" id="game-cover"><strong>Hearts of Iron IV</strong> PCs, 2016</li>
+                <li><img src="Assets/GameCovers/eFootball.png" alt="CopertinaeFootball" id="game-cover"><strong>eFootball</strong> Mobile devices / PCs / PS4, PS5, Xbox Series X/S, Xbox One, 2021</li>
+            </ol>
+            <img src="Assets/computer.png" id="AtalantaBC">
+        </div>
+        <div class="box" style="padding: 0px; padding: 10px; grid-template-columns: auto; grid-template-rows: auto auto;">
+            <h2 style="margin: 0px;">I cheer for Atalanta BC.</h2>
+            <p style="text-align: justify;">As a proud Bergamasco, supporting Atalanta is in my blood. While our team is often underrated by outsiders, we made history on May 22nd, 2024, by winning the Europa League final 3-0 against Leverkusen in Dublin. It was our first major title since the 1960s! To me, Atalanta is a growing team, despite it not being as popular as AC Milan or Juventus, it is still a football team that Bergamascos care a lot for. Including myself.</p>
+            <img src="Assets/Atalanta.png" id="AtalantaBC">
+        </div>
+    </div>
+    <div class="footer">
+        <p style="font-style: italic; grid-column: 1; grid-row: 1;" id="copyright">© 2026 Luca Pezzera. All rights reserved.</p>
+        <div class="socialsSection">
+            <a href="https://www.discord.com/users/1215351744549224463" target="_blank"><img src="Assets/discord.png" alt="Discord" class="socialIMG"></a>
+            <a href="https://www.facebook.com/profile.php?id=61574686895271&locale=it_IT" target="_blank" alt="Facebook"><img src="Assets/facebook.png" alt="Facebook" class="socialIMG"></a>
+        </div>
+    </div>
+    <script src="theme.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>

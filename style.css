@@ -230,6 +230,8 @@ li{
     margin-bottom: 10px;
     border-top: 2px dashed darkgray;
     padding-top: 10px;
+    display: flex;
+    align-items: center;
 }
 .destinazioni{
     grid-column: 2;
@@ -257,7 +259,47 @@ li{
         transform: rotate(10deg);
     }
 }
+#passion-text {
+    display: inline-block; /* Required for certain animations to work correctly */
+    transition: color 0.3s ease;
+}
 
+/* The animation class */
+.fade-effect {
+    animation: fadeUpDown 0.6s ease-in-out;
+}
+
+#AtalantaBC{
+    width: 55%;
+    grid-column: 2;
+    grid-row: 1 /span 2;
+    align-self: center;
+    margin: auto;
+}
+
+#game-cover{
+    height: 50px;
+    align-self: center;
+    margin: 10px;
+}
+#game-cover:hover{
+    transform: scale(1.5);
+}
+
+@keyframes fadeUpDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(10px); /* Adjust pixels for more/less movement */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .footer{
     display:grid;
     justify-content:space-between;
