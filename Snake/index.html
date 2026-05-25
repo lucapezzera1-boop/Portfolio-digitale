@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link rel="Stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Test Luchino</title>
+</head>
+<body>
+    
+    <div class="controls-mobile">
+        <button class="btn-joy up" onclick="changeDir('up')">▲</button>
+        <div class="row-joy">
+            <button class="btn-joy left" onclick="changeDir('left')">◀</button>
+            <button class="btn-joy right" onclick="changeDir('right')">▶</button>
+        </div>
+        <button class="btn-joy down" onclick="changeDir('down')">▼</button>
+    </div>
+    
+    <div class="punteggio"></div>
+    <div class="map">
+    </div>
+    <div class="leaderboard">
+        <h2>Classifica</h2>
+        <ul id="highScoresList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

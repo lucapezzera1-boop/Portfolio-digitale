@@ -6,7 +6,8 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="Scopri di piú su di me!">
     <meta property="og:title" content="Portfolio digitale di Luca P.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/lucapezzera1-boop/Portfolio-digitale/refs/heads/main/Assets/Immagine-preview.png">
+    <meta property="og:image" content="Assets/Immagine-preview.png">
+
     <title id="title">My Online Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -21,28 +22,41 @@
             <button id="theme-toggle" style="background: transparent; border: none; font-size: 24px; cursor: pointer;">🌙</button>
         </div>
         <div class="categorySection">
-            <button class="category" id="home-btn">Home</button>
+            <a href="index.html"><button class="category" id="home-btn">Home</button></a>
             <button class="category" id="about-btn">About Me</button>
             <a href="projects.html"><button class="category" id="projects-btn">Projects</button></a>
             <a href="journey.html"><button class="category" id="journeys-btn">My Journeys</button></a>
         </div>
     </div>
-    <div class="main">
-        <div class="selfie"><img src="Assets/fotoLuca.png" alt="Me in Venice (sept. 2025)" class="selfieIMG"></div>
-        <div class="box" style="grid-template-columns: auto;">
-            <details>
-                <summary id="who-am-i">Who am I?</summary>
-                <h1 id="ImLuca">I am Luca Pezzera.</h1>
-                <ul>
-                    <li id="birthday"><strong>Birthday:</strong> November 22nd, 2010</li>
-                    <li id="birthplace"><strong>Birthplace:</strong> Bergamo, Italy</li>
-                    <li id="education"><strong>Education:</strong> High-school, IT, Istituto Politecnico di Grumello D.M. (BG) [2024 - ongoing]</li>
-                    <li id="nationality"><strong>Nationality:</strong> Italian, Dutch</li>
-                    <li id="languages"><strong>Languages I speak:</strong> Italian, English</li>
-                </ul>
-            </details>
+<div class="main">
+    <div class="deck-container">
+        <button class="arrow-btn" id="prev-btn">◀</button>
+
+        <div class="deck">
+            
+            <div class="project-card active">
+                <a href="Snake/index.html" target = "_blank">
+                    <img class="card-banner" src="Assets/Snake.png" alt="Snake Game">
+                    <div class="card-info">
+                        <div class="snake" id="snek">This is a snake-like game!</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card">
+                <a href="https://lucapezzera1-boop.github.io/DOCKER-TEST/index.html" target="_blank">
+                    <img class="card-banner" src="https://github.com/lucapezzera1-boop/DOCKER-TEST/blob/main/Assets/immagine-preview.jpg?raw=true" alt="Docker Test">
+                    <div class="card-info">
+                        <div class="snake" id="website">This is my original website!</div>
+                    </div>
+                </a>
+            </div>
+
         </div>
+
+        <button class="arrow-btn" id="next-btn">▶</button>
     </div>
+</div>
     <div class="footer">
         <p style="font-style: italic; grid-column: 1; grid-row: 1;" id="copyright">© 2026 Luca Pezzera. All rights reserved.</p>
         <div class="socialsSection">
@@ -50,7 +64,8 @@
             <a href="https://www.facebook.com/profile.php?id=61574686895271&locale=it_IT" target="_blank" alt="Facebook"><img src="Assets/facebook.png" alt="Facebook" class="socialIMG"></a>
         </div>
     </div>
-    <script src="home.js"></script>
+    <script src="project.js"></script>
     <script src="theme.js"></script>
+    <script src="project-lang.js"></script>
 </body>
 </html>
