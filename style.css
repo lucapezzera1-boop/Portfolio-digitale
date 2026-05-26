@@ -26,6 +26,15 @@ body{
     background: var(--bg-color);
     color: var(--text-color);
 }
+#canvas-ariete {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    border-radius: 10px;
+    transition: ease-in-out 0.2s;
+}
 
 img, button, a{
     -webkit-user-drag: none;
@@ -187,7 +196,7 @@ body{
     display: grid;
     min-width: 50%;
     max-width: 80%;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     margin: auto;
     margin-top: 20px;
@@ -282,9 +291,12 @@ li{
     align-self: center;
     margin: 10px;
     transition:ease-in-out 0.1s;
+    border: 2px solid var(--text-color);
+    border-radius: 5%;
 }
 #game-cover:hover{
     transform: scale(1.5);
+    box-shadow: 0px 0px 10px var(--text-color);
 }
 
 @keyframes fadeUpDown {
@@ -364,6 +376,22 @@ li{
     border-radius: 20px;
     grid-row: 2;
     grid-column: 1;
+}
+#randomFact{
+    width: 25%;
+    margin: auto;
+    font-size: 20px;
+    color: var(--text-color);
+    background-color: var(--box-bg);
+    transition:ease-in-out 0.1s;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+#randomFact:hover{
+    background-color: var(--map-bg);
+    transform: scale(1.1);
+    box-shadow: var(--text-color) 0px 0px 15px;
 }
 .header, .footer {
     background-color: var(--header-footer-bg);
@@ -520,6 +548,22 @@ li{
         height: auto;
         z-index: 1;
         width: 90%;
+    }
+    #box3d{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+    }
+    #canvas-ariete{
+        grid-row: 3;
+        grid-column: 1 /span 2;
+    }
+    #randomFact{
+        width: 100%;
+    }
+    p, h2{
+        grid-row: 2;
+        grid-column: 1 /span 2;
     }
 
     .destinazioni {
