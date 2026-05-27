@@ -2,8 +2,20 @@ import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 import { OrbitControls } from 'https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
 
+const loader = new GLTFLoader();
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x222222); 
+scene.background = new THREE.Color(0x222222);
+const textureLoader = new THREE.TextureLoader();
+textureLoader.load('Assets/3Dbackground.jpg', (texture) => {
+    
+    texture.mapping = THREE.EquirectangularReflectionMapping;
+    
+    texture.colorSpace = THREE.SRGBColorSpace;
+
+    scene.background = texture;
+    
+    scene.environment = texture; 
+});
 
 const canvas = document.getElementById('canvas-ariete');
 const container = canvas.parentElement;
@@ -11,7 +23,7 @@ const container = canvas.parentElement;
 let width = canvas.clientWidth || container.clientWidth / 2;
 let height = canvas.clientHeight || 300;
 
-const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(70, width / height, 0.1, 1000);
 camera.position.set(0, 5, 10);
 
 const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
@@ -31,7 +43,6 @@ scene.add(ambientLight);
 
 let model = null; 
 
-const loader = new GLTFLoader();
 let isHovered = false;
 canvas.addEventListener('mouseenter', () => {
     isHovered = true;
@@ -48,7 +59,7 @@ loader.load(
         
         model.traverse(function (child) {
             if (child.isMesh) {
-                child.material.metalness = 0.3; 
+                child.material.metalness = 0.2; 
                 child.material.roughness = 0.15;
             }
         });

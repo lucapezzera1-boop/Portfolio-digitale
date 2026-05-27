@@ -122,7 +122,8 @@ img, button, a{
     border-radius: 7px;
 }
 .categorySection{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -133,32 +134,34 @@ img, button, a{
 .category{
     font-size: 18px;
     font-weight:bold;
-    padding: 10px 20px;
     border: 2px solid transparent;
     border-radius: 5px;
     cursor: pointer;
+    padding: 10px 20px;
     transition: ease-in-out 0.1s;
     border-bottom: 5px solid transparent;
     background-color: transparent;
-    color: var(--text-color)
+    color: var(--text-color);
 }
 .category:hover{
     border-bottom: 5px solid white;
     transform: scale(1.1);
 }
+.categorySection a {
+    display: inline-block;
+    width: 100%;       
+    margin: 0 1%;
+}
+.category {
+    width: 100%;
+    box-sizing: border-box;
+}
 .main{
-    /* display: grid;
-    justify-content: center;
-    align-items: center; */
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     background: var(--bg-color);
     padding: 50px;
-    /* grid-template-columns: 30% 30% 30%; */
-    /* grid-template-rows: auto auto;
-    align-items: center;
-    place-content: center; */
 }
 .selfie{
     height: 100px;
@@ -525,7 +528,7 @@ li{
     }
     
     .category {
-        font-size: 11px;
+        font-size: 10px;
     }
     
     .categorySection {
