@@ -1,6 +1,7 @@
 const introduction = document.getElementById("intro");
 const passionSpan = document.getElementById("passion-text");
 const funFact = document.getElementById("randomFact");
+const tankDescription = document.getElementById("tank-description");
 
 const English = document.getElementById("en-btn");
 const Italian = document.getElementById("it-btn");
@@ -24,6 +25,11 @@ const introTranslations = {
     en: "I am Luca Pezzera. I live in Bergamo, Italy. I am 15 years old, and I currently study at Istituto Politecnico IT highschool. I love ",
     it: "Sono Luca Pezzera. Vivo a Bergamo, Italia. Ho 15 anni e attualmente studio alla scuola superiore informatica Istituto Politecnico. Adoro ",
     nl: "Ik ben Luca Pezzera. Ik woon in Bergamo, Italië. Ik ben 15 jaar oud en ik studeer momenteel aan de IT-middelbare school Istituto Politecnico. Ik hou van "
+};
+const tankTranslations = {
+    en: "Out of all the armored vehicles in military history, the Italian C2 Ariete (also known as the Ariete AMV) is by far my favorite tank. While mainstream attention usually goes to the heavy German Leopards or American Abrams, the Ariete is a true underdog that deserves way more credit. What makes it so special to me is its brilliant philosophy of design. Instead of just stacking heavy armor, the C2 upgrade focuses on high mobility and cutting-edge technology. With a massive new 1500-horsepower engine packed into a chassis that is significantly lighter than its NATO rivals, it has an incredible power-to-weight ratio. It is fast, agile, and deadly. On top of that, it's equipped with world-class Leonardo optics and a modern digital command system, making it incredibly smart on the battlefield. It's a perfect mix of aggressive aesthetics, Italian engineering, and high-tech warfare. It might be underrated by the masses, but to me, it's the ultimate modern war machine.",
+    it: "Tra tutti i veicoli corazzati della storia militare, il carro armato italiano C2 Ariete (noto anche come Ariete AMV) è di gran lunga il mio preferito. Mentre l'attenzione del grande pubblico si concentra solitamente sui pesanti Leopard tedeschi o sugli Abrams americani, l'Ariete è un vero outsider che merita molta più considerazione. Ciò che lo rende così speciale per me è la sua brillante filosofia progettuale. Invece di limitarsi ad accumulare una pesante corazzatura, l'aggiornamento C2 si concentra sull'elevata mobilità e sulla tecnologia all'avanguardia. Con un nuovo motore da ben 1500 cavalli alloggiato in uno scafo significativamente più leggero rispetto ai suoi rivali NATO, vanta un incredibile rapporto peso/potenza. È veloce, agile e letale. Oltre a ciò, è equipaggiato con ottiche Leonardo di livello mondiale e un moderno sistema di comando digitale, che lo rendono incredibilmente intelligente sul campo di battaglia. È una miscela perfetta di estetica aggressiva, ingegneria italiana e guerra ad alta tecnologia. Potrebbe essere sottovalutato dai più, ma per me è la macchina da guerra moderna per eccellenza.",
+    nl: "Van alle gepantserde voertuigen in de militaire geschiedenis is de Italiaanse C2 Ariete (ook bekend als de Ariete AMV) verreweg mijn favoriete tank. Hoewel de aandacht in de media meestal uitgaat naar de zware Duitse Leopards of de Amerikaanse Abrams, is de Ariete een echte underdog die veel meer erkenning verdient. Wat hem voor mij zo bijzonder maakt, is zijn briljante ontwerpfilosofie. In plaats van simpelweg zware bepantsering toe te voegen, richt de C2-upgrade zich op hoge mobiliteit en geavanceerde technologie. Met een enorme nieuwe motor van 1500 pk in een chassis dat aanzienlijk lichter is dan dat van zijn NAVO-rivalen, heeft hij een ongelooflijke vermogen-gewichtsverhouding. Hij is snel, wendbaar en dodelijk. Bovendien is hij uitgerust met hoogwaardige Leonardo-optiek en een modern digitaal commandosysteem, waardoor hij ongelooflijk slim is op het slagveld. Het is een perfecte mix van agressieve esthetiek, Italiaanse techniek en hightech oorlogsvoering. Hij wordt misschien door het grote publiek onderschat, maar voor mij is het de ultieme moderne oorlogsmachine."
 };
 
 // Multilingual passions list
@@ -83,9 +89,10 @@ function updateLanguageUI() {
         funFact.innerHTML = "Random fact about you, please!";
         copyright.textContent = "© 2026 Luca Pezzera. All rights reserved.";
         textNode.nodeValue = introTranslations.en;
-    } else if (currentLang === "it") {
-        Italian.style.textDecoration = "underline";
-        Title.innerHTML = "Il Mio Portfolio Online";
+        textNode.nodeValue = introTranslations.en;
+                if(tankDescription) tankDescription.textContent = tankTranslations.en;    } else if (currentLang === "it") {
+                    Italian.style.textDecoration = "underline";
+                    Title.innerHTML = "Il Mio Portfolio Online";
         home.innerHTML = "Home";
         about.innerHTML = "About Me";
         projects.innerHTML = "Progetti";
@@ -93,8 +100,10 @@ function updateLanguageUI() {
         funFact.innerHTML = "Un fatto casuale su di me, per favore!";
         copyright.textContent = "© 2026 Luca Pezzera. Tutti i diritti riservati.";
         textNode.nodeValue = introTranslations.it;
-    } else if (currentLang === "nl") {
-        Dutch.style.textDecoration = "underline";
+        textNode.nodeValue = introTranslations.it;
+                if(tankDescription) tankDescription.textContent = tankTranslations.it;
+            } else if (currentLang === "nl") {
+                Dutch.style.textDecoration = "underline";
         Title.innerHTML = "Mijn online portfolio";
         home.innerHTML = "Home";
         about.innerHTML = "About Me";
@@ -103,6 +112,8 @@ function updateLanguageUI() {
         funFact.innerHTML = "Een willekeurig feitje over mij, alstublieft!";
         copyright.textContent = "© 2026 Luca Pezzera. Alle rechten voorbehouden.";
         textNode.nodeValue = introTranslations.nl;
+        textNode.nodeValue = introTranslations.nl;
+                if(tankDescription) tankDescription.textContent = tankTranslations.nl;
     }
     
     // Instantly translate current passion word to match language

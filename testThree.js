@@ -29,12 +29,22 @@ scene.add(camera);
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
 scene.add(ambientLight);
 
+let model = null; 
+
 const loader = new GLTFLoader();
+let isHovered = false;
+canvas.addEventListener('mouseenter', () => {
+    isHovered = true;
+});
+
+canvas.addEventListener('mouseleave', () => {
+    isHovered = false;
+});
 
 loader.load(
     'Assets/c1_ariete_main_battle_tank.glb', 
     function (gltf) {
-        const model = gltf.scene;
+        model = gltf.scene;
         
         model.traverse(function (child) {
             if (child.isMesh) {
@@ -50,7 +60,11 @@ loader.load(
         console.log("L'Ariete C1 è pronto in battaglia!");
     },
     function (xhr) {
-        console.log((xhr.loaded / xhr.total * 100) + '% caricato');
+        if (xhr.total > 0) {
+            console.log((xhr.loaded / xhr.total * 100) + '% caricato');
+        } else {
+            console.log(xhr.loaded + ' bytes caricati');
+        }
     },
     function (error) {
         console.error("Errore durante il caricamento del modello:", error);
@@ -61,12 +75,16 @@ function animate() {
     requestAnimationFrame(animate);
     controls.update(); 
     renderer.render(scene, camera);
+    
+    if (model && !isHovered) {
+        model.rotation.y += 0.0075;
+    }
 }
 animate();
 
 window.addEventListener('resize', () => {
-    const newWidth = canvas.clientWidth;
-    const newHeight = canvas.clientHeight;
+    const newWidth = canvas.clientWidth || container.clientWidth / 2;
+    const newHeight = canvas.clientHeight || 300;
 
     camera.aspect = newWidth / newHeight;
     camera.updateProjectionMatrix();

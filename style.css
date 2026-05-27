@@ -202,6 +202,10 @@ body{
     margin-top: 20px;
 }
 
+#mapBox{
+    grid-template-columns: 70% 30%;
+}
+
 summary {
     width: 100%;
     margin: 0;
